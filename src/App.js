@@ -1,7 +1,12 @@
-import React from "react";
+import { AppLayout } from './components/AppLayout';
+import { HomePage } from './pages/HomePage';
 
-const App = () => {
-  return <div className="app">Good Luck</div>;
-};
+function App() {
+  return (
+    <AppLayout>
+      <HomePage />
+    </AppLayout>
+  );
+}
 
 export default App;
