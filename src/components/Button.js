@@ -15,9 +15,11 @@ const StyledButton = styled.button.attrs(({ type = 'button' }) => ({
   cursor: pointer;
   color: ${theme('colors.buttonText')};
   outline: none;
+  transition: all 0.2s ease-in-out;
 
   &:hover {
     color: ${theme('colors.buttonHover')};
+    transform: scale(1.1);
   }
 `;
 
@@ -33,6 +35,7 @@ const StyledFilledButton = styled(StyledButton)`
 
   &:hover {
     color: ${theme('colors.white')};
+    box-shadow: 0px 2px 10px ${theme('colors.buttonText')};
   }
 `;
 
@@ -60,6 +63,7 @@ const StyledSubmitButton = styled(SubmitButton)`
 
   &:hover {
     color: ${theme('colors.white')};
+    box-shadow: 0px 2px 10px ${theme('colors.buttonText')};
   }
 `;
 
