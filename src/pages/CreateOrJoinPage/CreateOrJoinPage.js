@@ -1,30 +1,27 @@
+import { useNavigate } from 'react-router-dom';
+import { useAppState } from '../../hocs/AppStateProvider';
 import styled from 'styled-components';
-import { fadeInFromBottom } from '../../../../lib/theme';
+import { fadeInFromBottom } from '../../lib/theme';
+import { FilledButton, Button } from '../../components/Button';
 
-import { FilledButton, Button } from '../../../../components/Button';
+function CreateOrJoinPage({ className, ...props }) {
+  const navigate = useNavigate();
+  const { userName } = useAppState();
 
-function CreateOrJoinForm({
-  className,
-  userName,
-  handleSubmitWithParams,
-  ...props
-}) {
   return (
     <div className={className}>
-      <div className='title'>คุณ {userName}</div>
+      <h1 className='title'>คุณ {userName}</h1>
       <div className='button-wrapper fade-in-bottom'>
-        <FilledButton onClick={() => handleSubmitWithParams('createRoom')}>
+        <FilledButton onClick={() => navigate('/create')}>
           สร้างห้องใหม่
         </FilledButton>
-        <Button onClick={() => handleSubmitWithParams('joinRoom')}>
-          เข้าร่วมแชท
-        </Button>
+        <Button onClick={() => navigate('/join')}>เข้าร่วมแชท</Button>
       </div>
     </div>
   );
 }
 
-const StyledCreateOrJoinForm = styled(CreateOrJoinForm)`
+const StyledCreateOrJoinPage = styled(CreateOrJoinPage)`
   width: 60%;
   margin: 50px auto;
   display: flex;
@@ -63,4 +60,4 @@ const StyledCreateOrJoinForm = styled(CreateOrJoinForm)`
   }
 `;
 
-export { StyledCreateOrJoinForm as CreateOrJoinForm };
+export { StyledCreateOrJoinPage as CreateOrJoinPage };

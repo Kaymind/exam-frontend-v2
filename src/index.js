@@ -1,10 +1,12 @@
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { theme } from 'styled-tools';
 import { theme as themeConfig } from './lib/theme';
+
+import { AppContextProvider } from './hocs/AppStateProvider';
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -41,8 +43,12 @@ body,
 
 ReactDOM.render(
   <ThemeProvider theme={themeConfig}>
-    <GlobalStyle />
-    <App />
+    <BrowserRouter>
+      <AppContextProvider>
+        <GlobalStyle />
+        <App />
+      </AppContextProvider>
+    </BrowserRouter>
   </ThemeProvider>,
   document.getElementById('root')
 );

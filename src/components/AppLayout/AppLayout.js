@@ -30,6 +30,8 @@ const StyledAppLayout = styled(AppLayout)`
     > img {
       height: 100%;
       display: block;
+      user-drag: none;
+      user-select: none;
     }
   }
 

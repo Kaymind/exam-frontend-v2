@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
 
-function Message({
-  className,
-  msg: { name, message } = {},
-  userName,
-  ...props
-}) {
+function Message({ className, msg: { name, message }, userName, ...props }) {
   const isSentByCurrentUser = name === userName;
   return (
     <div className={className}>
