@@ -116,7 +116,7 @@ export function AppContextProvider({ children }) {
       ? { ...oldChatHistory }
       : {
           ...oldChatHistory,
-          [roomName]: { messages: [{ name: 'eiei', message: 'hello' }] },
+          [roomName]: { messages: [{ name: 'eiei', message: 'สวัสดี' }] },
         };
     const duplicateRoomName = !!oldChatHistory[roomName];
     localStorageSerializer('roomName', roomName);
