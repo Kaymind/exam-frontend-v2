@@ -7,6 +7,7 @@ import { CreateOrJoinPage } from './pages/CreateOrJoinPage';
 import { CreateRoomPage } from './pages/CreateRoomPage';
 import { JoinRoomPage } from './pages/JoinRoomPage';
 import { ChatRoomPage } from './pages/ChatRoomPage';
+import { Redirect } from './components/Redirect';
 
 function App() {
   const AuthenticatedAppLayout = withUserGuard(AppLayout);
@@ -53,7 +54,7 @@ function App() {
     },
     {
       path: '/*',
-      element: <h1>Page not found</h1>,
+      element: <Redirect to='/' />,
     },
   ]);
   return routes;
