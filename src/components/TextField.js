@@ -11,7 +11,6 @@ const Input = styled.input`
 const TextField = forwardRef((forwardedProps, ref) => {
   const {
     className,
-    title = '',
     error,
     placeholder = '',
     autoComplete = true,
@@ -25,7 +24,6 @@ const TextField = forwardRef((forwardedProps, ref) => {
 
   return (
     <Container className={className}>
-      {!!title && <div className='title'>{title}</div>}
       <div
         className={`input-group ${chatBox ? 'chat-box' : ''}   ${
           withError ? 'with-error' : ''
@@ -50,10 +48,6 @@ const TextField = forwardRef((forwardedProps, ref) => {
 });
 
 const StyledTextField = styled(TextField)`
-  > .title {
-    margin-bottom: '40px';
-  }
-
   ${Input} {
     font-family: inherit;
     font-size: 34px;
