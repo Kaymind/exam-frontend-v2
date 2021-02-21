@@ -23,7 +23,7 @@ export const fadeInFromBottom = keyframes`
 100% { bottom: 0px; opacity: 1; }
 `;
 
-export const fadeInFromRight = keyframes`
-0% { right: -10px; opacity: 0; }
-100% { right: 0px; opacity: 1; }
+export const fadeInFromBottomRight = keyframes`
+0% { bottom: -10px; right: -10px; opacity: 0; }
+100% { bottom: 0px; right: 0px; opacity: 1; }
 `;

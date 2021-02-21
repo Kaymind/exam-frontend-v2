@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { theme } from 'styled-tools';
-import { fadeInFromBottom, fadeInFromRight } from '../../lib/theme';
+import { fadeInFromBottom, fadeInFromBottomRight } from '../../lib/theme';
 import { TextField } from '../../components/TextField';
 import { Messages } from './components/Messages';
 
@@ -79,6 +79,7 @@ const StyledChatRoomPage = styled(ChatRoomPage)`
       display: flex;
       flex-direction: column;
       align-items: center;
+      animation: ${fadeInFromBottomRight} 0.8s ease-out 0.1s backwards;
 
       ${Messages} {
         width: 100%;
@@ -88,7 +89,6 @@ const StyledChatRoomPage = styled(ChatRoomPage)`
         max-height: 85vh;
         padding: 10px 10px 60px;
         overflow: auto;
-        animation: ${fadeInFromRight} 0.7s ease-out backwards;
       }
 
       ${TextField} {
@@ -96,7 +96,6 @@ const StyledChatRoomPage = styled(ChatRoomPage)`
         width: 100%;
         bottom: 0;
         left: 0;
-        animation: ${fadeInFromBottom} 0.8s ease-out 0.1s backwards;
 
         &::placeholder {
           color: red;
