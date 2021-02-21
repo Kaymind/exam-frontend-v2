@@ -24,7 +24,6 @@ function JoinRoomPage({
           name='roomName'
           autoComplete={false}
           placeholder='ชื่อห้อง'
-          withError
           error={error}
           onChange={(e) => setRoomName(e.target.value)}
         />

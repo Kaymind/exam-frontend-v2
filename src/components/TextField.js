@@ -11,11 +11,10 @@ const Input = styled.input`
 const TextField = forwardRef((forwardedProps, ref) => {
   const {
     className,
-    error,
+    error = false,
     placeholder = '',
     autoComplete = true,
     placeholderCustom,
-    withError = false,
     chatBox = false,
     ...props
   } = forwardedProps;
@@ -26,7 +25,7 @@ const TextField = forwardRef((forwardedProps, ref) => {
     <Container className={className}>
       <div
         className={`input-group ${chatBox ? 'chat-box' : ''}   ${
-          withError ? 'with-error' : ''
+          error ? 'with-error' : ''
         }`}
       >
         {placeholderCustom && (

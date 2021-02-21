@@ -23,7 +23,6 @@ function CreateRoomPage({
           ref={inputRef}
           name='roomName'
           autoComplete={false}
-          withError
           error={error}
           onChange={(e) => setRoomName(e.target.value)}
         />
