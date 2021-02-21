@@ -12,6 +12,7 @@ export function withChatRoomPage(Component) {
       roomName,
       getChatHistory,
       setChatHistory,
+      leaveChatRoom,
     } = useAppState();
 
     function handleSubmit(e) {
@@ -32,6 +33,7 @@ export function withChatRoomPage(Component) {
       userName,
       roomName,
       messages,
+      leaveChatRoom,
     };
 
     return <Component {...props} {...pageProps} />;

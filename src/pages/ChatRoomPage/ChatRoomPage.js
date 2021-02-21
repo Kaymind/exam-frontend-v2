@@ -12,9 +12,9 @@ function ChatRoomPage({
   setChatMessage,
   handleSubmit,
   roomName,
+  leaveChatRoom,
   ...props
 }) {
-  const { leaveChatRoom } = useAppState();
   return (
     <div className={className}>
       <form onSubmit={handleSubmit}>

@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { fadeInFromBottom } from '../../lib/theme';
 
@@ -13,9 +12,9 @@ function JoinRoomPage({
   handleSubmit,
   error,
   inputRef,
+  navigate,
   ...props
 }) {
-  const navigate = useNavigate();
   return (
     <div className={className}>
       <form onSubmit={handleSubmit}>

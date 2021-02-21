@@ -12,9 +12,9 @@ function CreateRoomPage({
   handleSubmit,
   error,
   inputRef,
+  navigate,
   ...props
 }) {
-  const navigate = useNavigate();
   return (
     <div className={className}>
       <form onSubmit={handleSubmit}>

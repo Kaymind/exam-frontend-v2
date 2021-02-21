@@ -40,6 +40,7 @@ export function withCreateRoomPage(Component) {
       error,
       setError,
       inputRef,
+      navigate,
     };
     return <Component {...props} {...pageProps} />;
   }

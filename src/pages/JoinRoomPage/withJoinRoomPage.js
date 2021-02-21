@@ -9,6 +9,7 @@ export function withJoinRoomPage(Component) {
     const [roomName, setRoomName] = useState('');
     const [error, setError] = useState('');
     const navigate = useNavigate();
+
     const { joinRoom, messages, getChatHistory } = useAppState();
     const hasChatRoom = !!messages.length;
 
@@ -42,6 +43,7 @@ export function withJoinRoomPage(Component) {
       error,
       setError,
       inputRef,
+      navigate,
     };
 
     return <Component {...props} {...pageProps} />;

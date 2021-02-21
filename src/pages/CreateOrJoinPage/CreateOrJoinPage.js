@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import { fadeInFromBottom } from '../../lib/theme';
 import { FilledButton, Button } from '../../components/Button';
 
-function CreateOrJoinPage({ className, ...props }) {
-  const navigate = useNavigate();
-  const { userName } = useAppState();
-
+function CreateOrJoinPage({ className, userName, navigate, ...props }) {
   return (
     <div className={className}>
       <h1 className='title'>คุณ {userName}</h1>
