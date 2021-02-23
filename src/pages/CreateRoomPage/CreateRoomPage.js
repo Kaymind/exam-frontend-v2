@@ -51,7 +51,6 @@ const StyledCreateRoomPage = styled(CreateRoomPage)`
 
     ${TextField} {
       width: 100%;
-      position: relative;
     }
 
     .button-wrapper {
